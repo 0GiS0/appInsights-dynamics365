@@ -1,14 +1,13 @@
 console.log("calling slow API Call");
 
-function reqListener() {
-    console.log(this.responseText);
-}
-
+// function reqListener() {
+//     console.log(this.responseText);
+// }
 
 //Asyncronous slow call
 var xhr = new XMLHttpRequest();
 
-xhr.onload = reqListener;
+// xhr.onload = reqListener;
 
 xhr.onreadystatechange = function () {
     if (xhr.readyState == 4) {
