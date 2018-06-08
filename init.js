@@ -11,6 +11,29 @@ appInsights.config.maxAjaxCallsPerView = -1;
 // CORS requests to correlate outgoing AJAX dependencies with corresponding requests on the server side.
 // Default false. 
 appInsights.config.enableCorsCorrelation = true;
+// appInsights.config.enableDebug = true;
+
+console.log("============= appInsights.config ======================");
+console.dir(appInsights.config);
+console.log("=======================================================");
+
+window.onerror = function (msg, url, lineNo, columnNo, error) {
+    console.log("============== Error captured =================");
+    console.log("msg: " + msg);
+    console.log("url: " + url);
+    console.log("lineNo: " + lineNo);
+    console.log("columnNo: " + columnNo);
+    console.log("error: " + error);
+    console.log("======================== =================");
+
+    console.log("*** error ***");
+    console.dir(error);
+    console.log("****************");
+
+    appInsights.trackException(error);
+
+    return false;
+};
 
 
 console.log('Application insights is working');
