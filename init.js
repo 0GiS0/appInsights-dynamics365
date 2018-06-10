@@ -35,5 +35,10 @@ window.onerror = function (msg, url, lineNo, columnNo, error) {
     return false;
 };
 
-
 console.log('Application insights is working');
+
+function badAlert(msg) {
+    alet(msg);
+}
+
+badAlert("Hello World!");
