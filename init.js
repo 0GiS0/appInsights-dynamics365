@@ -12,6 +12,7 @@ appInsights.config.maxAjaxCallsPerView = -1;
 // Default false. 
 appInsights.config.enableCorsCorrelation = true;
 // appInsights.config.enableDebug = true;
+appInsights.config.enableSessionStorageBuffer = false; //this property must be false for Dynamics 365
 
 console.log("============= appInsights.config ======================");
 console.dir(appInsights.config);
